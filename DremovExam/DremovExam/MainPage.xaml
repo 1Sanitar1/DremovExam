@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DremovExam.MainPage">
+
+    <StackLayout>
+
+        <Editor Placeholder="Введите текст"
+                Text="{Binding Text}"/>
+        <Button Text="Добавить" Clicked="OnButtonClicked" />
+        <Label x:Name="lSuccess" Text="" />
+
+        <Button Text="Просмотр записей" Clicked="ToNumberPage" />
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DremovExam.NumberPage">
+    <ContentPage.Content>
+        <StackLayout >
+
+            <CollectionView x:Name="collectionView"
+                    SelectionMode="Single"
+                    Margin="10">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical"
+                               ItemSpacing="2" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid BackgroundColor="WhiteSmoke" RowSpacing="0" ColumnSpacing="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+
+                            <Label Text="{Binding ID}" 
+                               Margin="0,0,1,0"
+                               BackgroundColor="White"
+                               Grid.Column="0"
+                               Grid.Row="0"
+                               Grid.RowSpan="2"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"/>
+                            <Label Text="{Binding Text}"  
+                               Margin="0,0,0,1"
+                               BackgroundColor="White"
+                               Grid.Column="1"
+                               Grid.Row="0"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"/>
+                            <Label Text="{Binding Fact}"  
+                               Margin="0"
+                               BackgroundColor="White"
+                               Grid.Column="1"
+                               Grid.Row="1"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
